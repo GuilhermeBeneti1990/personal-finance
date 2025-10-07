@@ -12,12 +12,12 @@ const menuItems = [
         icon: <MdOutlineDashboard />
     },
     {
-        label: 'New Transactions',
+        label: 'Criar Transação',
         url: '/transactions/new',
         icon: <MdOutlineAddTask />
     },
     {
-        label: 'Transactions',
+        label: 'Transações',
         url: '/transactions',
         icon: <MdOutlineListAlt />
     }
@@ -28,6 +28,8 @@ export const Sidebar = () => {
 
     const auth = useAppSelector(state => state.auth);
     const { pathname } = useLocation();
+
+    console.log(auth)
 
     const handleToggleExpand = () => setIsExpanded(!isExpanded);
     
