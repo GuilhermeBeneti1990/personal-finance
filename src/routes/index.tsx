@@ -5,6 +5,8 @@ import { Dashboard } from "../pages/Dashboard"
 import { NewTransaction } from "../pages/Transaction/New"
 import { EditTransaction } from "../pages/Transaction/Edit"
 import { Transactions } from "../pages/Transaction/Transactions"
+import { Account } from "../pages/Account"
+import { NotFound } from "../pages/NotFound"
 
 export const MainRoutes = () => {
     return (
@@ -18,12 +20,16 @@ export const MainRoutes = () => {
                     element={<Dashboard />}
                 />
 
+                <Route path="/account" element={<Account />}/>
+
                 <Route path="/transactions">
                     <Route index element={<Transactions />}/>
                     <Route path="new" element={<NewTransaction />}/>
                     <Route path=":id/edit" element={<EditTransaction />}/>
                 </Route>
             </Route>
+
+            <Route path="*" element={<NotFound />}/>
         </Routes>
     )
 }
