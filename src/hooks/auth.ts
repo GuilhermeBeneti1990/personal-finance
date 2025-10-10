@@ -13,7 +13,7 @@ export const useAuth = () => {
         dispatch(setAuthToken(authToken));
         dispatch(setAuthStatus('authenticated'));
 
-        localStorage.setItem('LOCAL_STORAGE_KEY', authToken);
+        localStorage.setItem(LOCAL_STORAGE_KEY, authToken);
     }
 
     const handleGetToken = () => localStorage.getItem(LOCAL_STORAGE_KEY);
