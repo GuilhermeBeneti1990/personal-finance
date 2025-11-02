@@ -58,7 +58,7 @@ export const Auth = ({ type }: Props) => {
                     <CardBody>
                         {type == 'signup' && <TextInput value={nameInput} placeholder="Digite seu nome" onChange={e => setNameInput(e.target.value)} borderRadius="sm" />}
                         <TextInput value={emailInput} placeholder="Digite seu email" onChange={e => setEmailInput(e.target.value)} borderRadius="sm" />
-                        <TextInput value={passwordInput} placeholder="Digite sua senha" onChange={e => setPasswordInput(e.target.value)} borderRadius="sm" />
+                        <TextInput type="password" value={passwordInput} placeholder="Digite sua senha" onChange={e => setPasswordInput(e.target.value)} borderRadius="sm" />
                     </CardBody>
 
                     <CardFooter>
